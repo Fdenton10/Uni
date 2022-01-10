@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<!-- API's Jquery-csv, google charts and google js-->
+		<script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="jquery.csv.js"></script> 
+		<script src="jquery.csv.min.js"></script> 
+
+		<script type="text/javascript">
+			google.charts.load("visualization", "1", {packages:["corechart"]});
+			google.charts.setOnLoadCallback(readFile);
+
+			function readFile() 
+			{
+				$.get("data_209.csv", function(csvString)
+				{
+					//Converts the csv data to array format
+					var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+					drawChart(arrayData)
+			
+				}); 
+			}; 
+				
+			function drawChart(arrayData)
+			{
+				//Creates the data set for google charts.
+				var data = new google.visualization.arrayToDataTable(arrayData);
+				newData = dateEdit(data);
+				var view = new google.visualization.DataView(newData);
+				//Set columns for chart equal to appropriate values required. 
+				//Column[1] = date in UNIX timestamp
+				//Column[4] = no levels
+				view.setColumns([1,4]);
+				
+				var options = {
+				  title: "Data 209",
+				  //Get Labels for chart and set minimum axis values based on the min and max values in that column.
+				  hAxis: {title: data.getColumnLabel(1), minValue: data.getColumnRange(1).min, maxValue: data.getColumnRange(1).max},
+				  vAxis: {title: data.getColumnLabel(4), minValue: data.getColumnRange(4).min, maxValue: data.getColumnRange(4).max},
+				  legend: 'none'
+				};
+				//Create and draw the chart.
+				var chart = new google.visualization.LineChart(document.getElementById('chart'));
+				chart.draw(view, options);
+			};
+			//Attempts to restructure data from UNIX timestamp to filter based on specs requirements.
+			//Did not work as intended, correct chart was not generated.
+			function dateEdit(data){
+				for(let i = 1; i < data.length; i++)
+				{
+						//Attempting to restructure the date.
+						var unix_date = data[i][1];
+						var date = new Date(unix_date);
+						var year = date.getFullYear();
+						var month = date.getMonth() + 1;
+						var day = date.getDate();
+						var formattedDate = day + "/" + month + "/" + year;
+						data[i][1] = formattedDate;
+				}
+				return data
+			}
+		</script>
+	</head> 
+	<body> 
+		<div id="chart" style="width: 900px; height: 500px;"></div>
+	</body> 
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="station">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "rec" maxOccurs="unbounded" minOccurs="0" >
+                    <xs:complexType>
+                        <xs:attribute name="ts" type="xs:int" use="optional"></xs:attribute>
+                        <xs:attribute name="nox" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="no" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="no2" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="pm10" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="nvpm10" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="v10" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="nvpm2.5" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="pm2.5" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="vpm2.5" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="co" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="o3" type="xs:float" use="optional"></xs:attribute>
+                        <xs:attribute name="so2" type="xs:float" use="optional"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:enumeration  value="188"/>
+                        <xs:enumeration  value="203"/>
+                        <xs:enumeration  value="206"/>
+                        <xs:enumeration  value="209"/>
+                        <xs:enumeration  value="213"/>
+                        <xs:enumeration  value="215"/>
+                        <xs:enumeration  value="228"/>
+                        <xs:enumeration  value="270"/>
+                        <xs:enumeration  value="271"/>
+                        <xs:enumeration  value="375"/>
+                        <xs:enumeration  value="395"/>
+                        <xs:enumeration  value="447"/>
+                        <xs:enumeration  value="452"/>
+                        <xs:enumeration  value="459"/>
+                        <xs:enumeration  value="463"/>
+                        <xs:enumeration  value="481"/>
+                        <xs:enumeration  value="500"/>
+                        <xs:enumeration  value="501"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+            <xs:attribute name="geocode" type="xs:string" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+<!-- 
+Francis Denton 
+Student Number - 18024097
+Advanced Topics in Web Development 2 - Resit
+t-->
