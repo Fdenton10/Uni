@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patient nhs-no="7503557856">
+	<name>
+		<first>Joseph</first>
+		<middle>Michael</middle>
+		<last>Bloggs</last>
+		<previous/>
+		<preferred>Joe</preferred>
+		<title>Mr</title>
+	</name>	
+	<address>
+		<street>2 Gloucester Road</street>
+		<street/>
+		<city>Bristol</city>
+		<county>Avon</county>
+		<postcode>BS2 4QS</postcode>
+	</address>
+	<tel>
+		<home>0117 9541054</home>
+		<mobile>07710 234674</mobile>
+	</tel>
+	<email>joe.bloggs@email.com</email>
+	<fax/>
+</patient>

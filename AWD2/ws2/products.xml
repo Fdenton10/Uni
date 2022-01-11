@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="1750">
+        <category id="3">Jewellery</category>
+        <category id="5">Accessories</category>
+        <product>Bracelet</product>
+        <description>Silver 2M Gold Plated 8mm Ball Bracelet 7.13cm</description>
+        <rrp>100.34</rrp>
+        <price>37.62</price>
+        <manufacturer/>
+        <image>bracelet_1750.jpg</image>
+        <keywords>
+            <keyword>barcelet</keyword>
+            <keyword>silver</keyword>
+            <keyword>gold_plated</keyword>
+        </keywords>
+        <stock>12</stock>
+    </product>
+    <product id="3210">
+        <category id="7">Health &amp; Beauty</category>
+        <product>CHANEL No.5 Eau de Parfum Spray - 50ml</product>
+        <description>Chanel No. 5 is classified as a refined, floral, soft fragrance. A bouquet of
+            abstract flowers with an indefinable femininity.</description>
+        <rrp>92.00</rrp>
+        <price>82.95</price>
+        <manufacturer>Chanel</manufacturer>
+        <image>perfume_3210.jpg</image>
+        <keywords>
+            <keyword>perfume</keyword>
+            <keyword>perfume_spray</keyword>
+            <keyword>chanel_no_5</keyword>
+        </keywords>
+        <stock>7</stock>
+    </product>
+    <product id="6133">
+        <category id="2">Shoes</category>
+        <product>Philippa 3 Mary Janes </product>
+        <description>Hush puppies philippa 3 is a great work shoe as it is on a comfortable mid heel
+            and softly rounded toe shape.</description>
+        <rrp/>
+        <price>54.99</price>
+        <manufacturer>Hush Puppies</manufacturer>
+        <image>shoes_6133.jpg</image>
+        <keywords>
+            <keyword>heels</keyword>
+            <keyword>black_leather</keyword>
+            <keyword>kitten_heels</keyword>
+            <keyword>leather</keyword>
+        </keywords>
+        <stock>4</stock>
+    </product>
+</products>
